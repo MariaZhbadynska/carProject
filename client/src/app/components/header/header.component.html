@@ -1,0 +1,17 @@
+<div class="container">
+    <header
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0">
+            <a [routerLink]="['/auth/home']" href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+                <img width="50" src="logo.svg" alt="">
+            </a>
+        </div>
+
+        <app-menu></app-menu>
+
+
+        <div class="col-md-3 text-end">
+            <button (click)='logout()' type="button" class="btn btn-warning me-2">Logout</button>
+        </div>
+    </header>
+</div>

@@ -1,0 +1,14 @@
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #28a745;
+}
+
+
+.btn-success {
+    border-radius: 25px;
+}
+

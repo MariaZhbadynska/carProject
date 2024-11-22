@@ -1,0 +1,136 @@
+<div class="container">
+    <div class="row">
+      <div class="col col-6">
+        <form [formGroup]="editCarForm" (ngSubmit)="submit()">
+            
+            <div class="mb-3">
+                <label for="photo" class="form-label">Photo</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="photo"
+                  formControlName="photo"
+                  [ngClass]="{
+                    'is-valid': editCarForm.controls['photo'].valid,
+                    'is-invalid':
+                      editCarForm.controls['photo'].invalid &&
+                      (editCarForm.controls['photo'].touched ||
+                        editCarForm.controls['photo'].dirty)
+                  }"
+                />
+                <div class="invalid-feedback">
+                  <div
+                    *ngIf="
+                      editCarForm.controls['photo'].errors &&
+                      editCarForm.controls['photo'].errors['required']
+                    "
+                  >
+                    Photo є обов'язковим полем
+                  </div>
+                </div>
+                <div class="valid-feedback">Все ок!!!</div>
+              </div>
+
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              formControlName="name"
+              [ngClass]="{
+                'is-valid': editCarForm.controls['name'].valid,
+                'is-invalid':
+                  editCarForm.controls['name'].invalid &&
+                  (editCarForm.controls['name'].touched ||
+                    editCarForm.controls['name'].dirty)
+              }"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  editCarForm.controls['name'].errors &&
+                  editCarForm.controls['name'].errors['required']
+                "
+              >
+                Name є обов'язковим полем
+              </div>
+            </div>
+            <div class="valid-feedback">Все ок!!!</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="model" class="form-label">Model</label>
+            <input
+              type="text"
+              class="form-control"
+              id="model"
+              formControlName="model"
+              [ngClass]="{
+                'is-valid': editCarForm.controls['model'].valid,
+                'is-invalid':
+                  editCarForm.controls['model'].invalid &&
+                  (editCarForm.controls['model'].touched ||
+                    editCarForm.controls['model'].dirty)
+              }"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  editCarForm.controls['model'].errors &&
+                  editCarForm.controls['model'].errors['required']
+                "
+              >
+                Brand є обов'язковим полем
+              </div>
+            </div>
+            <div class="valid-feedback">Все ок!!!</div>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input
+              type="number"
+              class="form-control"
+              id="price"
+              formControlName="price"
+              [ngClass]="{
+                'is-valid': editCarForm.controls['price'].valid,
+                'is-invalid':
+                  editCarForm.controls['price'].invalid &&
+                  (editCarForm.controls['price'].touched ||
+                    editCarForm.controls['price'].dirty)
+              }"
+            />
+            <div class="invalid-feedback">
+              <div
+                *ngIf="
+                  editCarForm.controls['price'].errors &&
+                  editCarForm.controls['price'].errors['required']
+                "
+              >
+                Price є обов'язковим полем
+              </div>
+            </div>
+            <div class="valid-feedback">Все ок!!!</div>
+          </div>
+
+
+        
+  
+         
+  
+          <button
+            [disabled]="editCarForm.invalid"
+            type="submit"
+            class="btn btn-primary"
+          >
+            Add
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  

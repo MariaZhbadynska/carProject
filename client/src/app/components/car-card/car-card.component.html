@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col col-12 col-sm-3">
+    <div class="card" style="width: 18rem;">
+      <img src="{{car.photo}}" class="card-img-top" alt="Car photo">
+      
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ car.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ car.model }}</h6>
+        <p class="card-text">ID: {{ car._id }}</p>
+        <p class="card-text">Ціна: {{ car.price }}</p>
+    
+        <a [routerLink]="['/auth/home']" (click)="addCarToFav()" href="#" class="btn btn-primary">
+          <i class="bi bi-heart"></i> Додати в обране
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+  

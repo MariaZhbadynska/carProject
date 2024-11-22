@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col col-12 col-sm-4" *ngFor="let car of favourites">
+      <div class="card" style="width: 18rem;">
+        <img [src]="car.photo" class="card-img-top" alt="Car photo">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ car.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ car.model }}</h6>
+          <p class="card-text">Ціна: {{ car.price }}</p>
+        </div>
+        <div class="btn">
+            <a [routerLink]="['/auth/favourites']" (click)="removeProduct(car._id)"  href="#" class="btn btn-danger">
+                <i class="bi bi-x-lg"></i> Видалити з вибраного
+              </a>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  

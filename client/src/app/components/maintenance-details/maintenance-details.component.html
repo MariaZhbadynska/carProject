@@ -1,0 +1,24 @@
+
+<div class="row">
+    <div class="col col-12 col-sm-3">
+      <div class="card" style="width: 18rem;">
+        <img src="{{car.photo}}" class="card-img-top" alt="Car photo">
+        
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ car.name }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ car.model }}</h6>
+          <p class="card-text">ID: {{ car._id }}</p>
+          <p class="card-text">Ціна: {{ car.price }}</p>
+      
+          <div class="row">
+            <div class="col">
+
+                <a (click)="back()" class="btn btn-primary m-2">Back</a>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    
